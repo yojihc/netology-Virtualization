@@ -86,6 +86,7 @@ Serial  - с данным параметром можно выполнять п�
 ![8](https://github.com/yojihc/netology-Virtualization/blob/7-01/pics/7.JPG?raw=true)
 #### Скриншот 9:
 ![9](https://github.com/yojihc/netology-Virtualization/blob/7-01/pics/8.JPG?raw=true)
+
 3. Создайте файл с содержимым «I like Linux» по пути /tmp/netology.txt.
 #### Скриншот 10: 
 ![10](https://github.com/yojihc/netology-Virtualization/blob/7-01/pics/9.JPG?raw=true)
