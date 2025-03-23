@@ -45,9 +45,11 @@
 ![2](https://github.com/yojihc/netology-Virtualization/blob/7-01/pics/1.JPG?raw=true)
 #### Скриншот 3:
 ![3](https://github.com/yojihc/netology-Virtualization/blob/7-01/pics/2.JPG?raw=true)
+
 3. Создайте файл inventory с созданными вами ВМ.
 #### Скриншот 4:
 ![4](https://github.com/yojihc/netology-Virtualization/blob/7-01/pics/3-1.JPG?raw=true)
+
 4. Проверьте доступность хостов с помощью модуля ping.
 #### Скриншот 5:
 ![5](https://github.com/yojihc/netology-Virtualization/blob/7-01/pics/4.JPG?raw=true)
