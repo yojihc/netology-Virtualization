@@ -1,2 +1,2 @@
-# netology-Virtualization
-Модуль Виртуализации
+# netology
+курс DevOps
