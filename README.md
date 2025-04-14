@@ -13,6 +13,17 @@
 
 В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
 
+#### Ответ:
+
+#### Screenshot 1
+![1](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/01.JPG?raw=true)
+
+#### Screenshot 2
+![2](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/02.JPG?raw=true)
+
+#### Screenshot 3
+![3](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/03.JPG?raw=true)
+
 ---
 
 ### Задание 2
@@ -23,6 +34,20 @@
 2. Перепишите сборку из задания 1 на declarative в виде кода.
 
 В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
+
+#### Ответ:
+
+#### Screenshot 4
+![4](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/04.JPG?raw=true)
+
+#### Screenshot 5
+![5](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/05.JPG?raw=true)
+
+#### Screenshot 6
+![6](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/06.JPG?raw=true)
+
+#### Screenshot 7
+![7](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/07.JPG?raw=true)
 
 ---
 
@@ -36,6 +61,21 @@
 1. Загрузите файл в репозиторий с помощью jenkins.
 
 В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
+
+#### Screenshot 8
+![8](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/08.JPG?raw=true)
+
+#### Screenshot 9
+![9](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/09.JPG?raw=true)
+
+#### Screenshot 10
+![10](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/10.JPG?raw=true)
+
+#### Screenshot 11
+![11](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/11.JPG?raw=true)
+
+#### Screenshot 12
+![12](https://github.com/yojihc/netology-Virtualization/blob/8-02-Jenkins/pics/12.JPG?raw=true)
 
 ---
 ## Дополнительные задания* (со звёздочкой)
