@@ -10,7 +10,7 @@
 - Установите и настройте HAProxy, воспользуйтесь материалами к лекции по [ссылке](2/)
 - Настройте балансировку Round-robin на 4 уровне.
 - На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy.
-- 
+ 
 #### Ответ:
 
 #### Скриншот 1:
@@ -32,6 +32,19 @@
 - HAproxy должен балансировать только тот http-трафик, который адресован домену example.local
 - На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy c использованием домена example.local и без него.
 
+#### Ответ:
+
+#### Скришот 3:
+
+![3](https://github.com/yojihc/netology-Virtualization/blob/10-2_Clustering_and_load_balancing/pics/04.JPG?raw=true)
+
+#### Скриншот 4:
+
+![4](https://github.com/yojihc/netology-Virtualization/blob/10-2_Clustering_and_load_balancing/pics/03.JPG?raw=true)
+
+#### Файл гконфигурации HAproxy
+
+[haproxy.cfg](https://github.com/yojihc/netology-Virtualization/blob/10-2_Clustering_and_load_balancing/cfg/haproxy%20%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%202.cfg)
 
 
 ---
