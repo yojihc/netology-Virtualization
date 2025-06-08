@@ -9,6 +9,15 @@
 - На проверку направить скриншот с командой и результатом ее выполнения
 
 
+#### Ответ:
+
+#### Скриншот 1:
+![1](https://github.com/yojihc/netology-Virtualization/blob/10-3_backup/pics/01.JPG?raw=true)
+
+
+#### Скриншот 2:
+![2](https://github.com/yojihc/netology-Virtualization/blob/10-3_backup/pics/02.JPG?raw=true)
+
 
 ### Задание 2
 - Написать скрипт и настроить задачу на регулярное резервное копирование домашней директории пользователя с помощью rsync и cron.
@@ -17,7 +26,14 @@
 - Резервная копия размещается локально, в директории `/tmp/backup`
 - На проверку направить файл crontab и скриншот с результатом работы утилиты.
 
+#### Ответ:
 
+#### Скриншот 3:
+![3](https://github.com/yojihc/netology-Virtualization/blob/10-3_backup/pics/03.JPG?raw=true)
+
+
+#### Скриншот 4:
+![4](https://github.com/yojihc/netology-Virtualization/blob/10-3_backup/pics/04.JPG?raw=true)
 
 ------
 
