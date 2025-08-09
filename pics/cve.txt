@@ -1,0 +1,39 @@
+21/tcp   open  ftp         vsftpd 2.3.4
+	CVE-2011-2523
+	vsftpd 2.3.4 - Backdoor Command Execution 
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+	CVE-2007-2447 
+	Samba 3.0.20 < 3.0.25rc3 - 'Username' map script' Command Execution (Metasploit)
+	
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+	CVE-2007-2583 
+	MySQL 5.0.x - IF Query Handling Remote Denial of Service 
+
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+	CVE-2009-0922
+	PostgreSQL 8.3.6 - Conversion Encoding Remote Denial of Service
+	
+5900/tcp open  vnc         VNC (protocol 3.3)
+	CVE-2001-0167
+	RealVNC 3.3.7 - Client Buffer Overflow (Metasploit) 
+	
+6667/tcp open  irc         UnrealIRCd
+| irc-info: 
+|   users: 1
+|   servers: 1
+|   lusers: 1
+|   lservers: 0
+|   server: irc.Metasploitable.LAN
+|   version: Unreal3.2.8.1. irc.Metasploitable.LAN 
+|   uptime: 0 days, 0:14:34
+|   source ident: nmap
+|   source host: Test-26D6EE32.mdh.local
+|_  error: Closing Link: qkyseziqd[kali.mdh.local] (Quit: qkyseziqd)
+
+	CVE-2010-2075
+	UnrealIRCd 3.2.8.1 - Backdoor Command Execution (Metasploit) 
+	
+8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+	CVE-2009-3548
+	Apache Tomcat Manager - Application Upload (Authenticated) Code Execution (Metasploit) 
