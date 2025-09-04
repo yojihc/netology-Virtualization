@@ -1,0 +1,41 @@
+user@thinkpc:~$ docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret -d mysql:latest
+
+user@thinkpc:~$ docker ps
+
+user@thinkpc:~$ sudo apt update && sudo apt install mysql-client-core-8.0
+
+user@thinkpc:~$ mysql -V
+
+user@thinkpc:~$ mysql -h 127.0.0.1 -P 3306 -u root -p secret
+
+mysql> status
+
+mysql> CREATE USER 'sys_temp'@'%' IDENTIFIED BY 'secret';
+
+mysql> SELECT user, host FROM mysql.user;
+
+mysql> SHOW GRANTS FOR 'sys_temp'
+
+user@thinkpc:~$ mysql -h 127.0.0.1 -P 3306 -u sys_temp -p
+
+mysql> SELECT user();
+
+user@thinkpc:~$ mysql -h 127.0.0.1 -P 3306 -u sys_temp -p sakila < '/home/user/Downloads/sakila-db/sakila-schema.sql' 
+Enter password: 
+
+user@thinkpc:~$ mysql -h 127.0.0.1 -P 3306 -u sys_temp -p sakila < '/home/user/Downloads/sakila-db/sakila-data.sql' 
+Enter password: 
+
+user@thinkpc:~$ mysql -h 127.0.0.1 -P 3306 -u sys_temp -p
+
+mysql> SHOW TABLES FROM sakila;
+
+mysql> USE sakila;
+
+mysql> SELECT * FROM actor LIMIT 10;
+
+mysql> DESC actor;
+
+
+
+
