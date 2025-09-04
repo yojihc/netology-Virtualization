@@ -1,2 +1,0 @@
-# netology
-курс DevOps
