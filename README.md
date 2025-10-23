@@ -39,6 +39,8 @@ See 'snap info docker' for additional versions.
    - Протестируйте корректность сборки 
 3. (Необязательная часть, *) Изучите инструкцию в проекте и запустите web-приложение без использования docker, с помощью venv. (Mysql БД можно запустить в docker run).
 4. (Необязательная часть, *) Изучите код приложения и добавьте управление названием таблицы через ENV переменную.
+
+
 ---
 ### ВНИМАНИЕ!
 !!! В процессе последующего выполнения ДЗ НЕ изменяйте содержимое файлов в fork-репозитории! Ваша задача ДОБАВИТЬ 5 файлов: ```Dockerfile.python```, ```compose.yaml```, ```.gitignore```, ```.dockerignore```,```bash-скрипт```. Если вам понадобилось внести иные изменения в проект - вы что-то делаете неверно!
@@ -67,6 +69,10 @@ See 'snap info docker' for additional versions.
 
 6. Остановите проект. В качестве ответа приложите скриншот sql-запроса.
 
+#### Screenshot.
+
+![01](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-22%20в%2023.52.26.png?raw=true)
+
 ## Задача 4
 1. Запустите в Yandex Cloud ВМ (вам хватит 2 Гб Ram).
 2. Подключитесь к Вм по ssh и установите docker.
@@ -74,6 +80,11 @@ See 'snap info docker' for additional versions.
 4. Зайдите на сайт проверки http подключений, например(или аналогичный): ```https://check-host.net/check-http``` и запустите проверку вашего сервиса ```http://<внешний_IP-адрес_вашей_ВМ>:8090```. Таким образом трафик будет направлен в ingress-proxy. Трафик должен пройти через цепочки: Пользователь → Internet → Nginx → HAProxy → FastAPI(запись в БД) → HAProxy → Nginx → Internet → Пользователь
 5. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения ```docker ps -a```
 6. Повторите SQL-запрос на сервере и приложите скриншот и ссылку на fork.
+
+#### Answer:
+[Repo]{https://github.com/yojihc/shvirtd-example-python.git}
+
+![02]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2014.58.41%20(2).png?raw=true}
 
 ## Задача 5 (*)
 1. Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа ```schnitzler/mysqldump``` при помощи ```docker run ...``` команды. Подсказка: "документация образа."
@@ -85,9 +96,29 @@ See 'snap info docker' for additional versions.
 Скачайте docker образ ```hashicorp/terraform:latest``` и скопируйте бинарный файл ```/bin/terraform``` на свою локальную машину, используя dive и docker save.
 Предоставьте скриншоты  действий .
 
+
+#### Screenshot
+
+![03]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.31.46%20(2).png?raw=true}
+
+![04]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.18.32%20(2).png?raw=true}
+
+![05]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.34.42%20(2).png?raw=true}
+
+![06]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.02%20(2).png?raw=true}
+
+![07]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.37%20(2).png?raw=true}
+
+![08]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.42%20(2).png?raw=true}
+
+
 ## Задача 6.1
 Добейтесь аналогичного результата, используя docker cp.  
 Предоставьте скриншоты  действий .
+
+#### Screenshot
+
+![09]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.21.52%20(2).png?raw=true}
 
 ## Задача 6.2 (**)
 Предложите способ извлечь файл из контейнера, используя только команду docker build и любой Dockerfile.  
