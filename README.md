@@ -82,9 +82,9 @@ See 'snap info docker' for additional versions.
 6. Повторите SQL-запрос на сервере и приложите скриншот и ссылку на fork.
 
 #### Answer:
-[Repo]{https://github.com/yojihc/shvirtd-example-python.git}
+[Repo](https://github.com/yojihc/shvirtd-example-python.git)
 
-![02]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2014.58.41%20(2).png?raw=true}
+![02](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2014.58.41%20(2).png?raw=true)
 
 ## Задача 5 (*)
 1. Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа ```schnitzler/mysqldump``` при помощи ```docker run ...``` команды. Подсказка: "документация образа."
@@ -99,17 +99,17 @@ See 'snap info docker' for additional versions.
 
 #### Screenshot
 
-![03]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.31.46%20(2).png?raw=true}
+![03](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.31.46%20(2).png?raw=true)
 
-![04]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.18.32%20(2).png?raw=true}
+![04](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.18.32%20(2).png?raw=true)
 
-![05]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.34.42%20(2).png?raw=true}
+![05](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2015.34.42%20(2).png?raw=true)
 
-![06]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.02%20(2).png?raw=true}
+![06](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.02%20(2).png?raw=true)
 
-![07]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.37%20(2).png?raw=true}
+![07](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.37%20(2).png?raw=true)
 
-![08]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.42%20(2).png?raw=true}
+![08](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.16.42%20(2).png?raw=true)
 
 
 ## Задача 6.1
@@ -118,7 +118,7 @@ See 'snap info docker' for additional versions.
 
 #### Screenshot
 
-![09]{https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.21.52%20(2).png?raw=true}
+![09](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2016.21.52%20(2).png?raw=true)
 
 ## Задача 6.2 (**)
 Предложите способ извлечь файл из контейнера, используя только команду docker build и любой Dockerfile.  
