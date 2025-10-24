@@ -82,6 +82,9 @@ See 'snap info docker' for additional versions.
 6. Повторите SQL-запрос на сервере и приложите скриншот и ссылку на fork.
 
 #### Answer:
+
+[sh](https://github.com/yojihc/shvirtd-example-python/blob/main/deploy.sh)
+
 [Repo](https://github.com/yojihc/shvirtd-example-python.git)
 
 ![02](https://github.com/yojihc/netology-Virtualization/blob/05-virt-04-docker-in-practice/pics/Снимок%20экрана%202025-10-23%20в%2014.58.41%20(2).png?raw=true)
