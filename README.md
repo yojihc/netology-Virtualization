@@ -29,11 +29,19 @@
 
 Приложите скриншот входящих правил «Группы безопасности» в ЛК Yandex Cloud .
 
+#### Screenshot 1-01
+
+![1-01](https://github.com/yojihc/netology-Virtualization/blob/03_terraform_exteded/pics/1-01.png?raw=true)
 ------
 
 ### Задание 2
 
 1. Создайте файл count-vm.tf. Опишите в нём создание двух **одинаковых** ВМ  web-1 и web-2 (не web-0 и web-1) с минимальными параметрами, используя мета-аргумент **count loop**. Назначьте ВМ созданную в первом задании группу безопасности.(как это сделать узнайте в документации провайдера yandex/compute_instance )
+
+#### Screenshot 2-01
+
+![2-01](https://github.com/yojihc/netology-Virtualization/blob/03_terraform_exteded/pics/2-01.png?raw=true)
+   
 2. Создайте файл for_each-vm.tf. Опишите в нём создание двух ВМ для баз данных с именами "main" и "replica" **разных** по cpu/ram/disk_volume , используя мета-аргумент **for_each loop**. Используйте для обеих ВМ одну общую переменную типа:
 ```
 variable "each_vm" {
@@ -41,9 +49,18 @@ variable "each_vm" {
 }
 ```  
 При желании внесите в переменную все возможные параметры.
+
+#### Screenshot 2-02
+
+![2-02](https://github.com/yojihc/netology-Virtualization/blob/03_terraform_exteded/pics/2-02.png?raw=true)
+
 4. ВМ из пункта 2.1 должны создаваться после создания ВМ из пункта 2.2.
 5. Используйте функцию file в local-переменной для считывания ключа ~/.ssh/id_rsa.pub и его последующего использования в блоке metadata, взятому из ДЗ 2.
 6. Инициализируйте проект, выполните код.
+
+#### Screenshot 2-03
+
+![2-03](https://github.com/yojihc/netology-Virtualization/blob/03_terraform_exteded/pics/2-03.png?raw=true)
 
 ------
 
@@ -51,6 +68,13 @@ variable "each_vm" {
 
 1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле **disk_vm.tf** .
 2. Создайте в том же файле **одиночную**(использовать count или for_each запрещено из-за задания №4) ВМ c именем "storage"  . Используйте блок **dynamic secondary_disk{..}** и мета-аргумент for_each для подключения созданных вами дополнительных дисков.
+
+
+#### Screenshot 3-01
+
+![3-01](https://github.com/yojihc/netology-Virtualization/blob/03_terraform_exteded/pics/3-01.png?raw=true)
+
+![3-02](https://github.com/yojihc/netology-Virtualization/blob/03_terraform_exteded/pics/3-02.png?raw=true)
 
 ------
 
@@ -79,6 +103,10 @@ storage ansible_host=<внешний ip-адрес> fqdn=<полное доме�
 
 Для общего зачёта создайте в вашем GitHub-репозитории новую ветку terraform-03. Закоммитьте в эту ветку свой финальный код проекта, пришлите ссылку на коммит.   
 **Удалите все созданные ресурсы**.
+
+#### Screenshot 4-01
+
+![4-01](https://github.com/yojihc/netology-Virtualization/blob/03_terraform_exteded/pics/4-01.png?raw=true)
 
 ------
 
