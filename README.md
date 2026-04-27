@@ -9,16 +9,48 @@
 ## Основная часть
 
 1. Попробуйте запустить playbook на окружении из `test.yml`, зафиксируйте значение, которое имеет факт `some_fact` для указанного хоста при выполнении playbook.
+
+#### Screenshot 01:
+![01](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-01/pics/01.png?raw=true)
+
 2. Найдите файл с переменными (group_vars), в котором задаётся найденное в первом пункте значение, и поменяйте его на `all default fact`.
 3. Воспользуйтесь подготовленным (используется `docker`) или создайте собственное окружение для проведения дальнейших испытаний.
 4. Проведите запуск playbook на окружении из `prod.yml`. Зафиксируйте полученные значения `some_fact` для каждого из `managed host`.
+
+#### Screenshot 04:
+![04](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-01/pics/04.png?raw=true)
+
 5. Добавьте факты в `group_vars` каждой из групп хостов так, чтобы для `some_fact` получились значения: для `deb` — `deb default fact`, для `el` — `el default fact`.
 6.  Повторите запуск playbook на окружении `prod.yml`. Убедитесь, что выдаются корректные значения для всех хостов.
+
+#### Screenshot 06:
+![06](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-01/pics/06.png?raw=true)
+
 7. При помощи `ansible-vault` зашифруйте факты в `group_vars/deb` и `group_vars/el` с паролем `netology`.
+
+#### Screenshot 07:
+![07](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-01/pics/07.png?raw=true)
+
 8. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь в работоспособности.
+
+#### Screenshot 08:
+![08](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-01/pics/08.png?raw=true)
+
 9. Посмотрите при помощи `ansible-doc` список плагинов для подключения. Выберите подходящий для работы на `control node`.
+
+#### Screenshot 09:
+![09](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-01/pics/09.png?raw=true)
+
 10. В `prod.yml` добавьте новую группу хостов с именем  `local`, в ней разместите localhost с необходимым типом подключения.
+
+#### Screenshot 10:
+![10](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-01/pics/10.png?raw=true)
+
 11. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь, что факты `some_fact` для каждого из хостов определены из верных `group_vars`.
+
+#### Screenshot 11:
+![11](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-01/pics/11.png?raw=true)
+
 12. Заполните `README.md` ответами на вопросы. Сделайте `git push` в ветку `master`. В ответе отправьте ссылку на ваш открытый репозиторий с изменённым `playbook` и заполненным `README.md`.
 13. Предоставьте скриншоты результатов запуска команд.
 
