@@ -1,0 +1,17 @@
+---
+  el:
+    hosts:
+      centos_node:
+        ansible_connection: docker
+        ansible_python_interpreter: /usr/bin/python3
+  deb:
+    hosts:
+      ubuntu_node:
+        ansible_connection: docker
+        ansible_python_interpreter: /usr/bin/python3
+  
+  local:
+    hosts:
+      localhost:
+       ansible_connection: local
+       ansible_python_interpreter: /usr/bin/python3
