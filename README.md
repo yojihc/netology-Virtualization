@@ -41,7 +41,9 @@
 ### Ответ:
 
 Ссылка на репозиторий с ролью vector [link](https://github.com/yojihc/vector-role.git)
+
 Ссылка на репозиторий с ролью lighthouse [link](https://github.com/yojihc/lighthouse-role.git)
+
 Ссылка на playbook [link](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-04-role/src/site.yaml)
 
 
