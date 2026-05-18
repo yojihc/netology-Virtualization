@@ -38,7 +38,15 @@
 11. В ответе дайте ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
 
 ---
+### Ответ:
 
+Ссылка на репозиторий с ролью vector [link](https://github.com/yojihc/vector-role.git)
+Ссылка на репозиторий с ролью lighthouse [link](https://github.com/yojihc/lighthouse-role.git)
+Ссылка на playbook [link](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-04-role/src/site.yaml)
+
+
+
+---
 ### Как оформить решение задания
 
 Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
