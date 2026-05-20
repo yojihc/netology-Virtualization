@@ -20,13 +20,13 @@
 3. Добавьте несколько разных дистрибутивов (oraclelinux:8, ubuntu:latest) для инстансов и протестируйте роль, исправьте найденные ошибки, если они есть.
 4. Добавьте несколько assert в verify.yml-файл для  проверки работоспособности vector-role (проверка, что конфиг валидный, проверка успешности запуска и др.). 
 
-[04](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-05-testing/pics/04.jpg?raw=true)
+![04](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-05-testing/pics/04.jpg?raw=true)
 
 5. Запустите тестирование роли повторно и проверьте, что оно прошло успешно.
 
-[05](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-05-testing/pics/05.jpg?raw=true)
+![05](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-05-testing/pics/05.jpg?raw=true)
 
-[06](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-05-testing/pics/06.jpg?raw=true)
+![06](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-05-testing/pics/06.jpg?raw=true)
 
 6. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 
@@ -46,7 +46,7 @@
 
 ### Ответ:
 
-[07](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-05-testing/pics/07.jpg?raw=true)
+![07](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-05-testing/pics/07.jpg?raw=true)
 
 [link](https://github.com/yojihc/vector-role.git)
 После выполнения у вас должно получится два сценария molecule и один tox.ini файл в репозитории. Не забудьте указать в ответе теги решений Tox и Molecule заданий. В качестве решения пришлите ссылку на  ваш репозиторий и скриншоты этапов выполнения задания. 
