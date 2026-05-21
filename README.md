@@ -12,6 +12,9 @@
 8. Если все шаги прошли успешно — выйдите из виртуального окружения `deactivate`.
 9. Ваше окружение настроено. Чтобы запустить его, нужно находиться в директории `ansible` и выполнить конструкцию `. venv/bin/activate && . hacking/env-setup`.
 
+#### Скришот подготовки.
+![01](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/001.png?raw=true)
+
 ## Основная часть
 
 Ваша цель — написать собственный module, который вы можете использовать в своей role через playbook. Всё это должно быть собрано в виде collection и отправлено в ваш репозиторий.
@@ -162,15 +165,35 @@ if __name__ == '__main__':
 
 **Шаг 4.** Проверьте module на исполняемость локально.
 
+### Screenshot 04
+
+![04](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/004.png?raw=true)
+
 **Шаг 5.** Напишите single task playbook и используйте module в нём.
 
+### Screenshot 05
+
+![05](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/005.png?raw=true)
+
 **Шаг 6.** Проверьте через playbook на идемпотентность.
+
+### Screenshot 06
+
+![06](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/006.png?raw=true)
 
 **Шаг 7.** Выйдите из виртуального окружения.
 
 **Шаг 8.** Инициализируйте новую collection: `ansible-galaxy collection init my_own_namespace.yandex_cloud_elk`.
 
+### Screenshot 08
+
+![08](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/008.png?raw=true)
+
 **Шаг 9.** В эту collection перенесите свой module в соответствующую директорию.
+
+### Screenshot 09
+
+![09](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/009.png?raw=true)
 
 **Шаг 10.** Single task playbook преобразуйте в single task role и перенесите в collection. У role должны быть default всех параметров module.
 
@@ -180,13 +203,32 @@ if __name__ == '__main__':
 
 **Шаг 13.** Создайте .tar.gz этой collection: `ansible-galaxy collection build` в корневой директории collection.
 
+### Screenshot 13
+
+![13](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/013.png?raw=true)
+
 **Шаг 14.** Создайте ещё одну директорию любого наименования, перенесите туда single task playbook и архив c collection.
+
+### Screenshot 14
+
+![14](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/014.png?raw=true)
 
 **Шаг 15.** Установите collection из локального архива: `ansible-galaxy collection install <archivename>.tar.gz`.
 
+### Screenshot 15
+
+![15](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/015.png?raw=true)
+
 **Шаг 16.** Запустите playbook, убедитесь, что он работает.
 
+### Screenshot 16
+
+![16](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/pics/016.png?raw=true)
+
 **Шаг 17.** В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
+
+[collection](https://github.com/yojihc/my_own_collection.git)
+[tar.gz](https://github.com/yojihc/netology-Virtualization/blob/08-ansible-06-module/src/my_own_namespace-yandex_cloud_elk-1.0.0.tar.gz)
 
 ## Необязательная часть
 
