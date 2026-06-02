@@ -34,8 +34,7 @@
 
 #### screenshot 01
 
-![01]()
-
+![01](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/01.png?raw=true)
 
 2. Создание задачи по Frontend
 
@@ -44,57 +43,57 @@
 
 #### screenshot 02
 
-![02]()
+![02](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/02.png?raw=true)
 
 Переместите одну из задач в колонку работа и добавьте там комментарий по желанию, например, «Frontend Bug» -> «Баг будет устранён путём обновления библиотеки в микрофронтенде».
 
 #### screenshot 03-1
 
-![03-1]()
+![03-1](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/03-1.png?raw=true)
 
 #### screenshot 03-2
 
-![03-2]()
+![03-2](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/03-2.png?raw=true)
 
 Создайте в выбранной задаче дочернюю карточку в Backlog доске с названием «Обновить библиотеку» «[LIB-456] Upgrade Material-UI from v4.12.3 to v5.0.0 in product-details microfrontend to resolve layout bugs»
 
 #### screenshot 04-1
 
-![04-1]()
+![04-1](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/04-1.png?raw=true)
 
 #### screenshot 04-2
 
-![04-2]()
+![04-2](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/04-2.png?raw=true)
 
 Переместите новую карточку в Бэклог Спринта, потом «В работе», в колонке «В работе» добавьте комментарий, например, «Library Material-UI updated to v5.0.0», также добавьте трудозатраты в новой задаче — 1ч.
 
 #### screenshot 05-1
 
-![05-1]()
+![05-1](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/05-1.png?raw=true)
 
 #### screenshot 05-2
 
-![05-2]()
+![05-2](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/05-2.png?raw=true)
 
 #### screenshot 05-3
 
-![05-3]()
+![05-3](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/05-3.png?raw=true)
 
 Переместите дочернюю задачу в колонку «Готово» на доске Sprint.
 
-### screenshot 06-1
+### screenshot 06
 
-![06-1]()
+![06](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/06.png?raw=true)
 
 Переместите родительскую задачу «Поправить bug на Frontend» в колонку «Готово» на доске Sprint, не забудьте списать потраченное время 0,2 ч.
 
 #### screenshot 07-1
 
-![07-1]()
+![07-1](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/07-1.png?raw=true)
 
 #### screenshot 07-2
 
-![07-2]()
+![07-2](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/frontend/07-2.png?raw=true)
 
 
 3. Создание задачи по Backend
@@ -103,31 +102,31 @@
 
 #### screenshot 01
 
-![01]()
+![01](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/backend/01.png?raw=true)
 
 Добавьте дочернюю задачу в задачу «Поправить bug на Backend», назовите её «Update API Endpoint for Improved Error Handling», получившуюся подзадачу переместите в колонку «Готово для тестирования».
 
 #### screenshot 02
 
-![02]()
+![02](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/backend/02.png?raw=true)
 
 Переместите новую дочернюю задачу в колонку «В работе» и добавьте комментарий «Update the API endpoint to enhance error handling mechanisms.» После добавьте трудозатраты (4ч) и переместите задачу в колонку «Готово для тестирования».
 
-![03-1]()
+![03-1](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/backend/03-1.png?raw=true)
 
 #### screenshot 03-2
 
-![03-2]()
+![03-2](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/backend/03-2.png?raw=true)
 
 В новой колонке «Готово для тестирования» добавьте следующий комментарий «All tests passed successfully» и трудозатраты (1ч). Переместите в колонку «Готово».
 
 #### screenshot 04-1
 
-![04-1]()
+![04-1](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/backend/04-1.png?raw=true)
 
 #### screenshot 04-2
 
-![04-2]()
+![04-2](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/backend/04-2.png?raw=true)
 
 Завершите задачу/карточку «Поправить bug на Backend» переместив в колонку «Готово».
 
@@ -137,6 +136,6 @@
 
 После завершения сделайте скриншот получившейся доски и сохраните его на компьютере или диске.
 
-#### screenshot 05-1
+#### screenshot 05
 
-![05-1]()
+![05](https://github.com/yojihc/netology-Virtualization/blob/09-jira-01-kaitan/pics/05.png?raw=true)
