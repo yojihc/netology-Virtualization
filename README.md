@@ -34,6 +34,12 @@
 #### Ответ:
 [ССЫЛКА на форк](https://github.com/yojihc/example-teamcity/tree/master)
 
+![01](https://github.com/yojihc/netology-Virtualization/blob/09-ci-05-teamcity/pics/Снимок%20экрана%C2%A0—%202026-06-15%20в%C2%A023.41.20.png?raw=true)
+
+![02](https://github.com/yojihc/netology-Virtualization/blob/09-ci-05-teamcity/pics/Снимок%20экрана%C2%A0—%202026-06-15%20в%C2%A023.41.33.png?raw=true)
+
+![03](https://github.com/yojihc/netology-Virtualization/blob/09-ci-05-teamcity/pics/Снимок%20экрана%C2%A0—%202026-06-15%20в%C2%A023.41.39.png?raw=true)
+
 
 ---
 
