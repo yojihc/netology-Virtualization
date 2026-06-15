@@ -32,7 +32,7 @@
 19. В ответе пришлите ссылку на репозиторий.
 
 #### Ответ:
-![ССЫЛКА на форк](https://github.com/yojihc/example-teamcity/tree/master)
+[ССЫЛКА на форк](https://github.com/yojihc/example-teamcity/tree/master)
 
 
 ---
