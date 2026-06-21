@@ -81,7 +81,7 @@ P.S.: если при запуске некоторые контейнеры б�
 
 ### Screenshot 07
 
-![07]()
+![07](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-02-systems/pics/07.png?raw=true)
 
 #
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
@@ -95,7 +95,7 @@ P.S.: если при запуске некоторые контейнеры б�
 
 ### Screenshot 08
 
-![08]()
+![08](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-02-systems/pics/08.png?raw=true)
 
 #
 9. Изучите список [telegraf inputs](https://github.com/influxdata/telegraf/tree/master/plugins/inputs). 
@@ -106,4 +106,4 @@ P.S.: если при запуске некоторые контейнеры б�
 ```
 ### Screenshot 09
 
-![09]()
+![09](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-02-systems/pics/09.png?raw=true)
