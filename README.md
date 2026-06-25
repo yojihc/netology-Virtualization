@@ -31,7 +31,7 @@
 Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
 
 <details>
-<summary>Нажмите, чтобы развернуть JSON-код дашборда</summary>
+<summary>Нажмите, чтобы развернуть query</summary>
   
 ```bash
 - утилизация CPU для nodeexporter (в процентах, 100-idle); node_memory_MemAvailable_bytes
