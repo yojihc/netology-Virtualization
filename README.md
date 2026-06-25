@@ -11,7 +11,7 @@
 
 ### Screenshot 01
 
-![01]()
+![01](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-03-grafana/pics/01.png?raw=true)
 
 ## Задание 2
 
@@ -39,7 +39,7 @@
 
 ### Screenshot 02
 
-![02]()
+![02](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-03-grafana/pics/02.png?raw=true)
 
 ## Задание 3
 
@@ -48,7 +48,7 @@
 
 ### Screenshot 03
 
-![03]()
+![03](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-03-grafana/pics/03.png?raw=true)
 
 ## Задание 4
 
