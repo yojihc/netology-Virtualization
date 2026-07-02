@@ -25,11 +25,11 @@ Filebeat следует сконфигурировать для отправки
 
 ### Screenshot 01
 
-![01]()
+![01](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-04-elk/pics/01.png?raw=true)
 
 ### Screenshot 02
 
-![02]()
+![02](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-04-elk/pics/02.png?raw=true)
 
 ## Задание 2
 
@@ -42,15 +42,15 @@ Filebeat следует сконфигурировать для отправки
  
 ### Screenshot 03
 
-![03]()
+![03](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-04-elk/pics/03.png?raw=true)
 
 ### Screenshot 04
 
-![04]()
+![04](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-04-elk/pics/04.png?raw=true)
 
 ### Screenshot 05
 
-![05]()
+![05](https://github.com/yojihc/netology-Virtualization/blob/10-monitoring-04-elk/pics/05.png?raw=true)
 ---
 
  
