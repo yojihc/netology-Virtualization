@@ -61,17 +61,42 @@
 
 ### Задание 1. Установка MicroK8S
 
-1. Установить MicroK8S на локальную машину или на удалённую виртуальную машину.
+1. Установить MicroK8S на локальную машину или на удалённую виртуальную
+
+### Screenshot 01
+
+![01](https://github.com/yojihc/netology-Virtualization/blob/k8s-01/pics/1-2.png?raw=true)
+
 2. Установить dashboard.
+
+### Screenshot 02
+
+![02](https://github.com/yojihc/netology-Virtualization/blob/k8s-01/pics/2-3.png?raw=true)
+
+
 3. Сгенерировать сертификат для подключения к внешнему ip-адресу.
 
 ------
 
 ### Задание 2. Установка и настройка локального kubectl
 1. Установить на локальную машину kubectl.
+
+### Screenshot 03
+
+![03](https://github.com/yojihc/netology-Virtualization/blob/k8s-01/pics/2-6.png?raw=true)
+
+
 2. Настроить локально подключение к кластеру.
+
+### Screenshot 04
+
+![04](https://github.com/yojihc/netology-Virtualization/blob/k8s-01/pics/2-8.png?raw=true)
+
 3. Подключиться к дашборду с помощью port-forward.
 
+### Screenshot 05
+
+![05](https://github.com/yojihc/netology-Virtualization/blob/k8s-01/pics/2-7.png?raw=true)
 ------
 
 ### Правила приёма работы
