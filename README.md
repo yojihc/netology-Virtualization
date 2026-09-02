@@ -44,7 +44,7 @@ spec:
 
 ### pic 01
 
-![01]()
+![01](https://github.com/yojihc/netology-Virtualization/blob/k8s-03/pics/01.png?raw=true)
 
 2. После запуска увеличить количество реплик работающего приложения до 2.
 
@@ -63,7 +63,7 @@ spec:
 
 ### pic 02
 
-![02]()
+![02](https://github.com/yojihc/netology-Virtualization/blob/k8s-03/pics/02.png?raw=true)
 
 4. Создать Service, который обеспечит доступ до реплик приложений из п.1.
 
@@ -97,9 +97,9 @@ spec:
 
 ### pic 03
 
-![03-1]()
+![03-1](https://github.com/yojihc/netology-Virtualization/blob/k8s-03/pics/03-1.png?raw=true)
 
-![03]()
+![03](https://github.com/yojihc/netology-Virtualization/blob/k8s-03/pics/03.png?raw=true)
 
 5. Создать отдельный Pod с приложением multitool и убедиться с помощью `curl`, что из пода есть доступ до приложений из п.1.
 
@@ -123,7 +123,7 @@ spec:
 
 ### pics 04
 
-![04]()
+![04](https://github.com/yojihc/netology-Virtualization/blob/k8s-03/pics/04.png?raw=true)
 
 ------
 
@@ -171,7 +171,7 @@ spec:
 
 ### pic 05
 
-![05]()
+![05](https://github.com/yojihc/netology-Virtualization/blob/k8s-03/pics/05.png?raw=true)
 
 3. Создать и запустить Service. Убедиться, что Init запустился.
 
@@ -201,7 +201,7 @@ spec:
 
 ### pic 06
 
-![06]()
+![06](https://github.com/yojihc/netology-Virtualization/blob/k8s-03/pics/06.png?raw=true)
 
 ------
 
