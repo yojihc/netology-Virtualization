@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-init-deployment
+  labels:
+    app: nginx-conditional
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-conditional
+  template:
+    metadata:
+      labels:
+        app: nginx-conditional
+    spec:
+      initContainers:
+      - name: wait-for-svc
+        image: busybox:1.36
+        command: ['sh', '-c', 'until nslookup nginx-conditional-svc.default.svc.cluster.local.; do echo waiting for service; sleep 2; done']
+      containers:
+      - name: nginx
+        image: nginx:stable
+        ports:
+        - containerPort: 80
