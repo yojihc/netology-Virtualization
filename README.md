@@ -38,6 +38,8 @@
 
 ## Screenshot 01 "ClusterIP curl":
 
+![link](https://github.com/yojihc/netology-Virtualization/tree/k8s-04/src_01)
+
 ![01]()
 
 ![02]()
