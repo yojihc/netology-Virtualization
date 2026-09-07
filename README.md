@@ -36,17 +36,17 @@
 
 ###  Ответ:
 
-## Screenshot 01 "ClusterIP curl":
-
 [манифесты](https://github.com/yojihc/netology-Virtualization/tree/k8s-04/src_01)
 
-![01]()
+## Screenshot 01 "ClusterIP curl":
 
-![02]()
+![01](https://github.com/yojihc/netology-Virtualization/blob/k8s-04/pics/01.png?raw=true)
+
+![02](https://github.com/yojihc/netology-Virtualization/blob/k8s-04/pics/02.png?raw=true)
 
 ## Screenshot 01 "Nodeport curl":
 
-![03]()
+![03](https://github.com/yojihc/netology-Virtualization/blob/k8s-04/pics/03.png?raw=true)
 
 
 ---
@@ -90,6 +90,8 @@
 «В последних версиях MicroK8s по умолчанию вместо Nginx ставится Ingress-контроллер Traefik. Так как Traefik — это принципиально другой контроллер, он полностью игнорирует аннотации Nginx (вроде rewrite-target).В архитектуре Traefik для модификации запросов (изменения заголовков, срезания префиксов, авторизации) вместо текстовых аннотаций используется официальный механизм Middleware через Kubernetes Custom Resource Definitions. Я создал Middleware типа stripPrefix, чтобы он автоматически удалял префикс /api перед отправкой трафика в бэкенд, реализуя ровно ту же логику, что была на лекции, но средствами актуального контроллера кластера».
 </details>
 
+[манифесты](https://github.com/yojihc/netology-Virtualization/tree/k8s-04/src_02)
+
 ## Screenshot 04 "Проверка доступности":
 
-![04]()
+![04](https://github.com/yojihc/netology-Virtualization/blob/k8s-04/pics/04.png?raw=true)
