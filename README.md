@@ -24,7 +24,7 @@
 
 ### Ответ:
 
-[manifest_link]()
+[manifest_link](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/src/containers-data-exchange.yaml)
 
 <details>
 <summary> kubectl describe pods data-exchange </summary>
@@ -120,15 +120,15 @@ user@dobranet src %
 
 ### Screenshot 1-01 "описание пода с контейнерами"
 
-![1-01]()
+![1-01](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/1-01.png?raw=true)
 
 ### Screenshot 1-02 "описание пода с контейнерами"
 
-![1-02]()
+![1-02](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/1-02.png?raw=true)
 
 ### Screenshot 1-03 "вывод команды чтения файла"
 
-![1-03]()
+![1-03](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/1-03.png?raw=true)
 ------
 
 ## Задание 2. PV, PVC
@@ -153,24 +153,24 @@ user@dobranet src %
 
 ### Ответ:
 
-[manifest_link]()
+[manifest_link](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/src/pv-pvc.yaml)
 
 ### Screenshot 2 "каждый шаг выполнения задания, начиная с шага 2"
 
-![2-01]()
-![2-02]()
-![2-03]()
+![2-01](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/2-01.png?raw=true)
+![2-02](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/2-02.png?raw=true)
+![2-03](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/2-03.png?raw=true)
 
 ```bash
 После удаления deploymnet и pvc, pv ушел в статус released т.к. в манифесте pv указано "persistentVolumeReclaimPolicy: Retain" что указывает k8s что после удаления pvc сам storage и данные на нем уничтожать нельзя.
 ```
 
-![2-04]()
+![2-04](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/2-04.png?raw=true)
 
 ```bash
 По пути /tmp/k8s-local-data/ на ВМ лежит файл shared.txt в который были записи каждые 5 секунд,  после удаления pv файл остался на своем месте, это связано с тем что hostPat использует директорию ОС, которой k8s не управляет.
 ```
-![2-05]()
+![2-05](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/2-05.png?raw=true)
 
 ------
 
@@ -192,10 +192,10 @@ user@dobranet src %
 ---
 ### Ответ:
 
-[manifest_link]()
+[manifest_link](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/src/sc.yaml)
 
 ### Screenshot 3 "каждый шаг выполнения задания, начиная с шага 2"
 
-![3-01]()
-![3-02]()
-![3-03]()
+![3-01](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/3-01.png?raw=true)
+![3-02](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/3-02.png?raw=true)
+![3-03](https://github.com/yojihc/netology-Virtualization/blob/k8s-05/pics/3-03.png?raw=true)
