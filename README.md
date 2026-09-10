@@ -1,201 +1,210 @@
-# Домашнее задание к занятию «Хранение в K8s»
+# Домашнее задание к занятию «Настройка приложений и управление доступом в Kubernetes»
 
-### Примерное время выполнения задания — 180 минут
+### Примерное время выполнения задания
 
-------
+120 минут
 
-## Задание 1. Volume: обмен данными между контейнерами в поде
-### Задача
+### Цель задания
 
-Создать Deployment приложения, состоящего из двух контейнеров, обменивающихся данными.
+Научиться:
+- Настраивать конфигурацию приложений с помощью **ConfigMaps** и **Secrets**
+- Управлять доступом пользователей через **RBAC**
 
-### Шаги выполнения
-1. Создать Deployment приложения, состоящего из контейнеров busybox и multitool.
-2. Настроить busybox на запись данных каждые 5 секунд в некий файл в общей директории.
-3. Обеспечить возможность чтения файла контейнером multitool.
-
-
-### Что сдать на проверку
-- Манифесты:
-  - `containers-data-exchange.yaml`
-- Скриншоты:
-  - описание пода с контейнерами (`kubectl describe pods data-exchange`)
-  - вывод команды чтения файла (`tail -f <имя общего файла>`)
-
-### Ответ:
-
-[manifest_link]()
-
-<details>
-<summary> kubectl describe pods data-exchange </summary>
-
-user@dobranet src % kubectl describe pod data-exchange-5d7897c454-xfmkj
-Name:             data-exchange-5d7897c454-xfmkj
-Namespace:        default
-Priority:         0
-Service Account:  default
-Node:             kubectl/10.130.0.19
-Start Time:       Tue, 08 Sep 2026 16:47:30 +0300
-Labels:           app=data-exchange
-                  pod-template-hash=5d7897c454
-Annotations:      cni.projectcalico.org/containerID: 8a4a76d8151e6fc3ffb830e10dfe1ff13cf21ca16993673046e585616c7f8e74
-                  cni.projectcalico.org/podIP: 10.1.92.117/32
-                  cni.projectcalico.org/podIPs: 10.1.92.117/32
-Status:           Running
-IP:               10.1.92.117
-IPs:
-  IP:           10.1.92.117
-Controlled By:  ReplicaSet/data-exchange-5d7897c454
-Containers:
-  busybox:
-    Container ID:  containerd://2b9d2820c8b4ac2ddbc480ed63576392257722ccfe720aadbe13c0fbc0e90444
-    Image:         busybox:1.36
-    Image ID:      docker.io/library/busybox@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662
-    Port:          <none>
-    Host Port:     <none>
-    Command:
-      /bin/sh
-      -c
-    Args:
-      while true; do echo $(date) >> /var/log/share/data.txt; sleep 5; done
-    State:          Running
-      Started:      Tue, 08 Sep 2026 16:47:31 +0300
-    Ready:          True
-    Restart Count:  0
-    Environment:    <none>
-    Mounts:
-      /var/log/share from storage (rw)
-      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-nk4f9 (ro)
-  network-multitool:
-    Container ID:   containerd://a54820719769b3488550e66d38c80f64d46813b3a2fcd7105a43409c3b831002
-    Image:          wbitt/network-multitool
-    Image ID:       docker.io/wbitt/network-multitool@sha256:db2810fe2c8d36db074eab5d98fbf861c8ed55e0786d648d3477b3de9135632e
-    Port:           <none>
-    Host Port:      <none>
-    State:          Running
-      Started:      Tue, 08 Sep 2026 16:47:32 +0300
-    Ready:          True
-    Restart Count:  0
-    Environment:
-      HTTP_PORT:  8080
-    Mounts:
-      /var/data/read from storage (rw)
-      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-nk4f9 (ro)
-Conditions:
-  Type                        Status
-  PodReadyToStartContainers   True 
-  Initialized                 True 
-  Ready                       True 
-  ContainersReady             True 
-  PodScheduled                True 
-Volumes:
-  storage:
-    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
-    Medium:     
-    SizeLimit:  <unset>
-  kube-api-access-nk4f9:
-    Type:                    Projected (a volume that contains injected data from multiple sources)
-    TokenExpirationSeconds:  3607
-    ConfigMapName:           kube-root-ca.crt
-    Optional:                false
-    DownwardAPI:             true
-QoS Class:                   BestEffort
-Node-Selectors:              <none>
-Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
-                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
-Events:
-  Type    Reason     Age   From               Message
-  ----    ------     ----  ----               -------
-  Normal  Scheduled  0s    default-scheduler  Successfully assigned default/data-exchange-5d7897c454-xfmkj to kubectl
-  Normal  Pulled     0s    kubelet            Container image "busybox:1.36" already present on machine and can be accessed by the pod
-  Normal  Created    0s    kubelet            Container created
-  Normal  Started    0s    kubelet            Container started
-  Normal  Pulling    0s    kubelet            Pulling image "wbitt/network-multitool"
-  Normal  Pulled     0s    kubelet            Successfully pulled image "wbitt/network-multitool" in 849ms (849ms including waiting). Image size: 96718848 bytes.
-  Normal  Created    0s    kubelet            Container created
-  Normal  Started    0s    kubelet            Container started
-user@dobranet src % 
-
-</details>
-
-### Screenshot 1-01 "описание пода с контейнерами"
-
-![1-01]()
-
-### Screenshot 1-02 "описание пода с контейнерами"
-
-![1-02]()
-
-### Screenshot 1-03 "вывод команды чтения файла"
-
-![1-03]()
-------
-
-## Задание 2. PV, PVC
-### Задача
-Создать Deployment приложения, использующего локальный PV, созданный вручную.
-
-### Шаги выполнения
-1. Создать Deployment приложения, состоящего из контейнеров busybox и multitool, использующего созданный ранее PVC
-2. Создать PV и PVC для подключения папки на локальной ноде, которая будет использована в поде.
-3. Продемонстрировать, что контейнер multitool может читать данные из файла в смонтированной директории, в который busybox записывает данные каждые 5 секунд. 
-4. Удалить Deployment и PVC. Продемонстрировать, что после этого произошло с PV. Пояснить, почему. (Используйте команду `kubectl describe pv`).
-5. Продемонстрировать, что файл сохранился на локальном диске ноды. Удалить PV.  Продемонстрировать, что произошло с файлом после удаления PV. Пояснить, почему.
-
-
-### Что сдать на проверку
-- Манифесты:
-  - `pv-pvc.yaml`
-- Скриншоты:
-  - каждый шаг выполнения задания, начиная с шага 2.
-- Описания:
-  - объяснение наблюдаемого поведения ресурсов в двух последних шагах.
-
-### Ответ:
-
-[manifest_link]()
-
-### Screenshot 2 "каждый шаг выполнения задания, начиная с шага 2"
-
-![2-01]()
-![2-02]()
-![2-03]()
-
-```bash
-После удаления deploymnet и pvc, pv ушел в статус released т.к. в манифесте pv указано "persistentVolumeReclaimPolicy: Retain" что указывает k8s что после удаления pvc сам storage и данные на нем уничтожать нельзя.
-```
-
-![2-04]()
-
-```bash
-По пути /tmp/k8s-local-data/ на ВМ лежит файл shared.txt в который были записи каждые 5 секунд,  после удаления pv файл остался на своем месте, это связано с тем что hostPat использует директорию ОС, которой k8s не управляет.
-```
-![2-05]()
+Это задание поможет вам освоить ключевые механизмы Kubernetes для работы с конфигурацией и безопасностью. Эти навыки необходимы для уверенного администрирования кластеров в реальных проектах. На практике навыки используются для:
+- Хранения чувствительных данных (Secrets)
+- Гибкого управления настройками приложений (ConfigMaps) 
+- Контроля доступа пользователей и сервисов (RBAC)
 
 ------
 
-## Задание 3. StorageClass
-### Задача
-Создать Deployment приложения, использующего PVC, созданный на основе StorageClass.
+## **Подготовка**
+### **Чеклист готовности**
+- Установлен Kubernetes (MicroK8S, Minikube или другой)
+- Установлен `kubectl`
+- Редактор для YAML-файлов (VS Code, Vim и др.)
+- Утилита `openssl` для генерации сертификатов
 
-### Шаги выполнения
+------
 
-1. Создать Deployment приложения, состоящего из контейнеров busybox и multitool, использующего созданный ранее PVC.
-2. Создать SC и PVC для подключения папки на локальной ноде, которая будет использована в поде.
-3. Продемонстрировать, что контейнер multitool может читать данные из файла в смонтированной директории, в который busybox записывает данные каждые 5 секунд.
+### Инструменты, которые пригодятся для выполнения задания
 
-### Что сдать на проверку
+1. [Инструкция](https://microk8s.io/docs/getting-started) по установке MicroK8S
+2. [Инструкция](https://minikube.sigs.k8s.io/docs/start/) по установке Minikube
+3. [Инструкция](https://kubernetes.io/docs/tasks/tools/) по установке kubectl
+4. [Инструкция](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools) по установке VS Code
+
+### Дополнительные материалы, которые пригодятся для выполнения задания
+
+1. [Описание](https://kubernetes.io/docs/concepts/configuration/secret/) Secret.
+2. [Описание](https://kubernetes.io/docs/concepts/configuration/configmap/) ConfigMap.
+3. [Описание](https://github.com/wbitt/Network-MultiTool) Multitool.
+4. [Описание](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) RBAC.
+5. [Пользователи и авторизация RBAC в Kubernetes](https://habr.com/ru/company/flant/blog/470503/).
+6. [RBAC with Kubernetes in Minikube](https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b).
+
+------
+
+## **Задание 1: Работа с ConfigMaps**
+### **Задача**
+Развернуть приложение (nginx + multitool), решить проблему конфигурации через ConfigMap и подключить веб-страницу.
+
+### **Шаги выполнения**
+1. **Создать Deployment** с двумя контейнерами
+   - `nginx`
+   - `multitool`
+3. **Подключить веб-страницу** через ConfigMap
+4. **Проверить доступность**
+
+### **Что сдать на проверку**
 - Манифесты:
-  - `sc.yaml`
-- Скриншоты:
-  - каждый шаг выполнения задания, начиная с шага 2
+  - `deployment.yaml`
+  - `configmap-web.yaml`
+- Скриншот вывода `curl` или браузера
+
 ---
-### Ответ:
+## **Задание 2: Настройка HTTPS с Secrets**  
+### **Задача**  
+Развернуть приложение с доступом по HTTPS, используя самоподписанный сертификат.
 
-[manifest_link]()
+### **Шаги выполнения**  
+1. **Сгенерировать SSL-сертификат**
+```bash
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+  -keyout tls.key -out tls.crt -subj "/CN=myapp.example.com"
+```
+2. **Создать Secret**
+3. **Настроить Ingress**
+4. **Проверить HTTPS-доступ**
 
-### Screenshot 3 "каждый шаг выполнения задания, начиная с шага 2"
+### **Что сдать на проверку**  
+- Манифесты:
+  - `secret-tls.yaml`
+  - `ingress-tls.yaml`
+- Скриншот вывода `curl -k`
 
-![3-01]()
-![3-02]()
-![3-03]()
+---
+## **Задание 3: Настройка RBAC**  
+### **Задача**  
+Создать пользователя с ограниченными правами (только просмотр логов и описания подов).
+
+### **Шаги выполнения**  
+1. **Включите RBAC в microk8s**
+```bash
+microk8s enable rbac
+```
+2. **Создать SSL-сертификат для пользователя**
+```bash
+openssl genrsa -out developer.key 2048
+openssl req -new -key developer.key -out developer.csr -subj "/CN={ИМЯ ПОЛЬЗОВАТЕЛЯ}"
+openssl x509 -req -in developer.csr -CA {CA серт вашего кластера} -CAkey {CA ключ вашего кластера} -CAcreateserial -out developer.crt -days 365
+```
+3. **Создать Role (только просмотр логов и описания подов) и RoleBinding**
+4. **Проверить доступ**
+
+### **Что сдать на проверку**  
+- Манифесты:
+  - `role-pod-reader.yaml`
+  - `rolebinding-developer.yaml`
+- Команды генерации сертификатов
+- Скриншот проверки прав (`kubectl get pods --as=developer`)
+
+---
+## Шаблоны манифестов с учебными комментариями
+### **1. Deployment с ConfigMap (nginx + multitool)**
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: nginx-config # ПОДКЛЮЧЕНИЕ ConfigMap
+          mountPath: /etc/nginx/conf.d
+      volumes:
+      - name: nginx-config
+        configMap:
+          name: nginx-config # УКАЖИТЕ имя созданного ConfigMap
+```
+### **2. ConfigMap для веб-страницы**
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: web-content # ИЗМЕНИТЕ: Укажите имя ConfigMap
+  namespace: default # ОПЦИОНАЛЬНО: Укажите namespace, если не default
+data:
+  # КЛЮЧЕВОЙ МОМЕНТ: index.html будет подключен как файл
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Страница из ConfigMap</title> # ИЗМЕНИТЕ: Заголовок страницы
+    </head>
+    <body>
+      <h1>Привет от Kubernetes!</h1> # ДОБАВЬТЕ: Свой контент страницы
+    </body>
+    </html>
+```
+
+### **3. Secret для TLS-сертификата**
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: tls-secret # ИЗМЕНИТЕ при необходимости
+type: kubernetes.io/tls
+data:
+  tls.crt: # ЗАМЕНИТЕ на base64-код сертификата (cat tls.crt | base64 -w 0)
+  tls.key: # ЗАМЕНИТЕ на base64-код ключа (cat tls.key | base64 -w 0)
+```
+### **4. Role для просмотра подов**
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: pod-viewer # ИЗМЕНИТЕ: Название роли
+  namespace: default # ВАЖНО: Role работает только в указанном namespace
+rules:
+- apiGroups: [""] # КЛЮЧЕВОЙ МОМЕНТ: "" означает core API group
+  resources: # РАЗРЕШЕННЫЕ РЕСУРСЫ:
+    - pods # Доступ к просмотру подов
+    - pods/log # Доступ к логам подов
+  verbs: # РАЗРЕШЕННЫЕ ДЕЙСТВИЯ:
+    - get # Просмотр отдельных подов
+    - list # Список всех подов
+    - watch # Мониторинг изменений
+    - describe # Просмотр деталей
+# ДОПОЛНИТЕЛЬНО: Можно добавить больше правил для других ресурсов
+```
+---
+
+## **Правила приёма работы**
+1. Домашняя работа оформляется в своём Git-репозитории в файле README.md. Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
+2. Файл README.md должен содержать:
+   - Скриншоты вывода команд `kubectl`
+   - Скриншоты результатов выполнения
+   - Тексты манифестов или ссылки на них
+3. Для заданий с TLS приложите команды генерации сертификатов
+
+## **Критерии оценивания задания**
+1. Зачёт: Все задачи выполнены, манифесты корректны, есть доказательства работы (скриншоты).
+2. Доработка (на доработку задание направляется 1 раз): основные задачи выполнены, при этом есть ошибки в манифестах или отсутствуют проверочные скриншоты.
+3. Незачёт: работа выполнена не в полном объёме, есть ошибки в манифестах, отсутствуют проверочные скриншоты. Все попытки доработки израсходованы (на доработку работа направляется 1 раз). Этот вид оценки используется крайне редко.
+
+## **Срок выполнения задания**  
+1. 5 дней на выполнение задания.
+2. 5 дней на доработку задания (в случае направления задания на доработку).
